@@ -1,0 +1,329 @@
+
+/* ------------------------------
+   1. GENERAL SETTINGS
+-------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #f8f7f3;
+    --surface: #eeede7;
+    --text: #292b28;
+    --muted: #777970;
+    --accent: #727b62;
+    --border: #deded5;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
+}
+
+/* ------------------------------
+   2. NAVIGATION
+-------------------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 9%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ------------------------------
+   3. HERO SECTION
+-------------------------------- */
+
+.hero {
+    min-height: 590px;
+    padding: 130px 12% 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.small-heading,
+.section-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 22px 0;
+}
+
+.hero h1 em {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 510px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.text-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 6px;
+}
+
+.text-link span {
+    color: var(--accent);
+}
+
+.hero-note {
+    min-width: 210px;
+    padding-left: 25px;
+    border-left: 1px solid var(--border);
+}
+
+.hero-note span {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+}
+
+.hero-note p {
+    font-size: 13px;
+    margin: 5px 0 25px;
+}
+
+/* ------------------------------
+   4. COMMON SECTIONS
+-------------------------------- */
+
+.section {
+    padding: 90px 12%;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    border-top: 1px solid var(--border);
+}
+
+.tinted {
+    background-color: var(--surface);
+}
+
+.section-content {
+    max-width: 720px;
+}
+
+.section-content h2,
+.contact-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.section-content p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+/* ------------------------------
+   5. EDUCATION
+-------------------------------- */
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline-date {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.timeline-item h3,
+.work-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    margin: 0;
+}
+
+/* ------------------------------
+   6. SKILLS
+-------------------------------- */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.skills-list span {
+    border: 1px solid var(--border);
+    padding: 10px 17px;
+    font-size: 13px;
+    color: var(--muted);
+    transition: all 0.3s ease;
+}
+
+.skills-list span:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* ------------------------------
+   7. WORK AND INTERESTS
+-------------------------------- */
+
+.work-item {
+    padding: 23px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.work-item p {
+    margin: 0;
+}
+
+/* ------------------------------
+   8. CONTACT
+-------------------------------- */
+
+.contact-section {
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.contact-section h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.contact-section > p:not(.small-heading) {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contact-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+/* ------------------------------
+   9. FOOTER
+-------------------------------- */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* ------------------------------
+   10. RESPONSIVE DESIGN
+-------------------------------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 85px 8%;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .hero-note {
+        width: 100%;
+    }
+
+    .section {
+        padding: 65px 8%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-content h2 {
+        font-size: 32px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    footer {
+        padding: 22px 7%;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
